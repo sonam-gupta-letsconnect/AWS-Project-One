@@ -1,14 +1,8 @@
 # AWS-Project-One
 
-+================================================================================+
-
-
-Send Fanout Event Notifications with Amazon Simple Queue Service (SQS) and Amazon Simple Notification Service (SNS)
-
-+================================================================================+
-Performed By - Sonam Gupta
-
-
++========================================================+
+# Send Fanout Event Notifications with Amazon Simple Queue Service (SQS) and Amazon Simple Notification Service (SNS)
++========================================================+
 
 We will explore how to utilize AWS Systems Manager for executing remote commands on your Amazon EC2 instances. Systems Manager serves as a management tool that empowers us to gain operational insights and securely take action on AWS resources at scale. By leveraging the run command feature of Systems Manager, we can simplify the management tasks by eliminating the need for bastion hosts, SSH, or remote PowerShell.
 
@@ -23,9 +17,9 @@ To overcome this challenge, we will implement the following steps:
 
 By following these steps, we will be able to effectively manage and administer your EC2 instances using Systems Manager while adhering to recommended practices.
 
-+================================================================================+
++========================================================+
 CREATE AN IDENTITY AND ACCESS MANAGEMENT (IAM) ROLE
-+================================================================================+
++========================================================+
 
 During this phase, you will generate an IAM role intended for granting Systems Manager the necessary authorization to execute actions on your instances.
 
@@ -140,9 +134,9 @@ Choose Create role.
 
 
 
-+================================================================================+
++========================================================+
 CREATE AN EC2 INSTANCE
-+================================================================================+
++========================================================+
 
 
 In this stage, you will generate an EC2 instance utilizing the role named EnablesEC2ToAccessSystemsManagerRole. This will grant the EC2 instance the ability to be controlled and managed by Systems Manager.
@@ -231,9 +225,9 @@ Choose Launch instance.
 
 Success!
 
-+================================================================================+
++========================================================+
 UPDATE THE SYSTEMS MANAGER AGENT
-+================================================================================+
++========================================================+
 
 
 With an EC2 instance now actively running the Systems Manager agent, we gain the ability to automate administrative tasks and effectively manage the instance. In this particular phase, we will execute a pre-packaged command, referred to as a document, designed to upgrade the agent. It is considered a best practice to update the Systems Manager Agent whenever a new instance is created.
@@ -349,10 +343,9 @@ Next, you will see a page documenting your running command, and then overall suc
 
 Success!
 
-+================================================================================+
++========================================================+
 RUN A REMOTE SHELL SCRIPT
-+================================================================================+
-
++========================================================+
 
 Now that your EC2 instance has the latest Systems Manager Agent, you can upgrade the packages on the EC2 instance. In this step, you will run a shell script through Run Command.
 
@@ -463,9 +456,9 @@ From the Output on: i-XX page, select the header of the Output panel to view the
 
 
 
-+================================================================================+
++========================================================+
 TERMINATE YOUR RESOURCES
-+================================================================================+
++========================================================+
 We will terminate your Systems Manager and EC2-related resources. Important: Terminating resources that are not actively being used reduces costs and is a best practice.
 
 
